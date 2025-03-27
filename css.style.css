@@ -1,0 +1,98 @@
+@font-face {
+    font-family: Oswald;
+    src: url(url../font/Oswald-VariableFont_wght.ttf);
+}
+
+
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+ }
+
+ /* Applique une image d'arrière-plan */
+ body {
+   margin: 0;
+   font-family: Oswald ;
+   background-size: cover; /* Adapte l'image pour couvrir tout l'écran */
+   background-repeat: no-repeat;
+   background-position: center; /* Centre l'image */
+   background-attachment: fixed; /* L'image reste fixe au scroll */
+ }
+ 
+ /* Styles pour la navigation */
+ header {
+   position: relative; /* Garde le contenu normal de la nav */
+   font-family: Oswald;
+   background-color: black;
+ }
+
+
+ h1{
+    text-align: center;
+    color: white;
+ }
+ 
+ nav {
+   background: rgba(0, 0, 0, 0.7); /* Ajoute un fond semi-transparent */
+   color: white;
+   padding: 1rem 2rem;
+   text-align: center;
+ }
+ 
+ nav ul {
+   list-style: none;
+   margin: 0;
+   padding: 0;
+   display: flex;
+   justify-content: space-around;
+   gap: 1.5rem;
+ }
+ 
+ nav ul li {
+   display: inline-block;
+ }
+ 
+ nav ul li a {
+   text-decoration: none;
+   color: white;
+   font-weight: bold;
+   transition: color 0.3s;
+ }
+ 
+ nav ul li a:hover {
+   color: #ffcc00;
+ }
+
+/* Conteneur des images */
+.carousel {
+  width: 120%; /* Ajuste la taille selon tes besoins */
+  overflow: hidden;
+  position: relative;
+}
+
+/* Liste des images */
+.carousel-images {
+  display: flex;
+  width: 100%; /* 100% * 5 images */
+  animation: slide 125s infinite; /* 75s pour faire défiler chaque image toutes les 15 secondes */
+}
+
+/* Chaque image */
+.carousel-images img {
+  width: 20%; /* Chaque image prend 20% de la largeur du conteneur */
+  object-fit: cover;
+}
+
+/* Animation pour faire défiler les images */
+@keyframes slide {
+  0% { transform: translateX(0); }
+  20% { transform: translateX(-100%); }
+  40% { transform: translateX(-200%); }
+  60% { transform: translateX(-300%); }
+  80% { transform: translateX(-400%); }
+  100% { transform: translateX(0); }
+}
+
+
+
