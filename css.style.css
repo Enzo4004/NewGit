@@ -1,21 +1,47 @@
 @font-face {
     font-family: Oswald;
     src: url(url../font/Oswald-VariableFont_wght.ttf);
+
 }
 
+@media (min-width: 768px) {
+    .button-1 {
+      padding: 12px 50px;
+    }
+  }
 
-*{
+
+  /* Animation pour faire défiler les images */
+@keyframes slide {
+    0% { transform: translateX(0); }
+    20% { transform: translateX(-100%); }
+    40% { transform: translateX(-200%); }
+    60% { transform: translateX(-300%); }
+    80% { transform: translateX(-400%); }
+    100% { transform: translateX(0); }
+  }
+  
+  
+
+/* Szttings de base pour commencer le css*/
+*{ 
     box-sizing: border-box;
     margin: 0;
     padding: 0;
  }
+ html{
+    width: 100%;
+ }
+
+
 
  /* Applique une image d'arrière-plan */
  body {
-   margin: 0;
+
    font-family: Oswald ;
    background-size: cover; /* Adapte l'image pour couvrir tout l'écran */
    background-repeat: no-repeat;
+   border-radius: border-box;
    background-position: center; /* Centre l'image */
    background-attachment: fixed; /* L'image reste fixe au scroll */
  }
@@ -27,6 +53,13 @@
    background-color: black;
  }
 
+
+ /*Pour le design du titre*/
+ .Logo1{
+    width: 30vh ;
+    display: flex;
+    justify-content: space-around   ;
+ }
 
  h1{
     text-align: center;
@@ -59,14 +92,11 @@
    font-weight: bold;
    transition: color 0.3s;
  }
- 
- nav ul li a:hover {
-   color: #ffcc00;
- }
+
 
 /* Conteneur des images */
 .carousel {
-  width: 120%; /* Ajuste la taille selon tes besoins */
+  width: 120%; /* Ajuste la taille */
   overflow: hidden;
   position: relative;
 }
@@ -75,7 +105,7 @@
 .carousel-images {
   display: flex;
   width: 100%; /* 100% * 5 images */
-  animation: slide 125s infinite; /* 75s pour faire défiler chaque image toutes les 15 secondes */
+  animation: slide 125s infinite; /* 10s pour faire défiler chaque image toutes les 15 secondes */
 }
 
 /* Chaque image */
@@ -84,15 +114,51 @@
   object-fit: cover;
 }
 
-/* Animation pour faire défiler les images */
-@keyframes slide {
-  0% { transform: translateX(0); }
-  20% { transform: translateX(-100%); }
-  40% { transform: translateX(-200%); }
-  60% { transform: translateX(-300%); }
-  80% { transform: translateX(-400%); }
-  100% { transform: translateX(0); }
+
+
+
+/* CSS design du boutton */
+.button-1 {
+  appearance: button;
+  background-color: #000;
+  background-image: none;
+  border: 1px solid #000;
+  border-radius: 4px;
+  box-shadow: #fff 4px 4px 0 0,#000 4px 4px 0 1px;
+  box-sizing: border-box;
+  color: #fff;
+  cursor: pointer;
+  display: inline-block;
+  font-family: Oswald;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 20px;
+  margin: 0 5px 10px 0;
+  overflow: visible;
+  padding: 12px 40px;
+  text-align: center;
+  text-transform: none;
+  touch-action: manipulation;
+  user-select: none;
+  -webkit-user-select: none;
+  vertical-align: middle;
+  white-space: nowrap;
 }
 
+.button-1:focus {
+  text-decoration: none;
+}
 
+.button-1:hover {
+  text-decoration: none;
+}
 
+.button-1:active {
+  box-shadow: rgba(0, 0, 0, .125) 0 3px 5px inset;
+  outline: 0;
+}
+
+.button-1:not([disabled]):active {
+  box-shadow: #fff 2px 2px 0 0, #000 2px 2px 0 1px;
+  transform: translate(2px, 2px);
+}
