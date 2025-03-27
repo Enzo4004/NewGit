@@ -23,7 +23,7 @@
   
   
 
-/* Szttings de base pour commencer le css*/
+/* Settings de base pour commencer le css*/
 *{ 
     box-sizing: border-box;
     margin: 0;
@@ -44,6 +44,7 @@
    border-radius: border-box;
    background-position: center; /* Centre l'image */
    background-attachment: fixed; /* L'image reste fixe au scroll */
+   background-color: #000;
  }
  
  /* Styles pour la navigation */
@@ -51,6 +52,7 @@
    position: relative; /* Garde le contenu normal de la nav */
    font-family: Oswald;
    background-color: black;
+   width: 100%;
  }
 
 
@@ -58,8 +60,10 @@
  .Logo1{
     width: 30vh ;
     display: flex;
-    justify-content: space-around   ;
+    justify-content: space-around;  
+
  }
+
 
  h1{
     text-align: center;
@@ -78,7 +82,7 @@
    margin: 0;
    padding: 0;
    display: flex;
-   justify-content: space-around;
+   justify-content: space-between;
    gap: 1.5rem;
  }
  
@@ -93,6 +97,14 @@
    transition: color 0.3s;
  }
 
+ .button-Position{
+   
+    box-sizing: border-box;
+    position: relative;
+    text-align: center;
+    margin: 10vh 0 15vh;
+
+ }
 
 /* Conteneur des images */
 .carousel {
@@ -110,7 +122,7 @@
 
 /* Chaque image */
 .carousel-images img {
-  width: 20%; /* Chaque image prend 20% de la largeur du conteneur */
+  width: 30%; /* Chaque image prend 20% de la largeur du conteneur */
   object-fit: cover;
 }
 
