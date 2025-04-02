@@ -33,7 +33,7 @@ h1 {
     transition: transform 0.3s, box-shadow 0.3s;
 }
 .galerieDim:hover {
-    transform: scale(1.05);
+    transform: scale(0.8);
     box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
 }
 .galerieDim img {
@@ -41,12 +41,6 @@ h1 {
     height: auto;
     border-radius: 10px;
     border: 3px solid #fff;
-}
-.caption {
-    margin-top: 10px;
-    font-size: 18px;
-    font-weight: bold;
-    color: white;
 }
 
 .logo{
