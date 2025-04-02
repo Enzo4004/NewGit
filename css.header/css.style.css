@@ -37,7 +37,7 @@
 
  /* Applique une image d'arrière-plan */
  body {
-
+  transform: scale(0.8);
    font-family: Oswald ;
    background-size: cover; /* Adapte l'image pour couvrir tout l'écran */
    background-repeat: no-repeat;
