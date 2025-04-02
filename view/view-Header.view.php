@@ -1,13 +1,64 @@
-
 <!DOCTYPE html>
 <html lang="fr">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sonar Du Rap "header"</title>
+    <meta author=Enzo Ramon>
+    <meta description="Association Musicale Sonar Crew">
+    <link rel="stylesheet" href="/css.style.css">
+    <link
+        href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400..800;1,400..800&family=Exo+2:ital,wght@0,100..900;1,100..900&family=Karla:ital,wght@0,200..800;1,200..800&family=Markazi+Text:wght@400..700&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Oswald:wght@200..700&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="stylesheet">
+    <title>Sonar Du Rap</title>
+    <script src = "../js/script.js"></script>   
 </head>
+
 <body>
-    <?php require_once ('../view/view-Header.view.php'); ?>
+   
     
-</body>
+    <!-- avec bcg du crew et nav menu et photo du crew avec le logo -->
+    <header>
+        
+        <h1>RATHURES</h1>
+
+
+
+        <nav>
+            <ul>
+                <li><a href="#APropos">A Propos</a></li>
+                <li><a href="#Galeries">Galeries</a></li>
+                <li><a href="#SonarCrew">Sonar Crew</a></li>
+                <li><a href="#SonarDuRap">Sonar Du Rap</a></li>
+                <li><a href="#Réseaux">Réseaux</a></li>
+          
+            </ul>
+        </nav>
+        </div>
+        <div class="carousel">
+            <div class="carousel-images">
+                <img src="/img/artworks-w2e1h4xul8ebaL9m-w3sZ0w-t1080x1080.jpg" alt="Image 1">
+                <img src="/img/b2O.jpg" alt="Image 2">
+                <img src="/img/Dauzi.jpg" alt="Image 3">
+                <img src="/img/kaaris.jpg" alt="Image 4">
+                <img src="/img/kendrick.jpg" alt="Image 5">
+                <img src="/img/angele.jpg" alt="image 6">
+                <img src="/img/plkAlbum.jpg" alt="image 7">
+                <img src="/img/soolking.jpg" alt="8">
+                <img src="/img/SchA7.jpg" alt="9">
+                <img src="/img/schJulius.jpg" alt="10">
+
+            </div>
+            <div class="button-Position">
+                <button class="button-1">Les pépites de la semaines !! </button>
+            </div>
+            <div class="container">
+                <img src="/img/Logo-Sonar.jpg" alt="Logo Sonar Crew" class="Logo1">
+                <img src="/img/logo-asso.jpg" alt="logo Association" class="Logo1">
+            </div>
+          
+                
+          
+    </header>
+
 </html>
