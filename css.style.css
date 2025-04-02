@@ -108,7 +108,7 @@
 
 /* Conteneur des images */
 .carousel {
-  width: 120%; /* Ajuste la taille */
+  width: 100%; /* Ajuste la taille */
   overflow: hidden;
   position: relative;
 }

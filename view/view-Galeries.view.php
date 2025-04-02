@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>La Galeries</title>
+</head>
+<body>
+    <main>
+        <h1> <a href="#Galeries"></a>La Galeries !</h1>
+        <br>
+        <br>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    </main>
+</body>
+</html>
