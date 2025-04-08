@@ -1,0 +1,101 @@
+   /* Mise en forme générale du body */
+   body {
+    font-family: oswald; 
+    margin: 0;
+    padding: 0;
+    background-color:black; 
+    color: black; 
+}
+
+/* Style de l'en-tête */
+header {
+    background-color: black; 
+    color: green; 
+    padding: 15px 0; /* Espacement interne */
+    text-align: center; 
+    font-size: 24px; /* Taille de texte */
+    font-weight: bold; /* Texte en gras */
+}
+
+/* Section générale */
+section {
+    padding: 40px 20px; /* Espacement interne de la section */
+    margin: 20px auto; /* Marge extérieure */
+    max-width: 1200px; /* Largeur maximale */
+    background-color: black; /* Fond blanc */
+    border-radius: 10px; /* Coins arrondis */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Ombre légère autour de la section */
+    transition: all 0.3s ease; /* Transition fluide lors du survol */
+}
+
+/* Effet au survol d'une section */
+section:hover {
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.10); /* Ombre plus intense */
+    transform: translateY(-10px); /* Légère élévation de la section */
+}
+
+/* Titre des sections */
+h2 {
+    text-align: center; /* Centrer le titre */
+    font-size: 28px; /* Taille du titre */
+    color: green; /* Vert pour les titres */
+}
+
+/* Liste des éléments en grille */
+.list {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr; /* Trois colonnes égales */
+    gap: 20px; /* Espacement entre les éléments */
+    margin-top: 20px; /* Marge supérieure */
+}
+
+/* Style pour chaque item de la liste */
+.item {
+    padding: 15px; /* Espacement interne */
+    background-color: black; /* Fond noir pour chaque élément */
+    border-radius: 10px; /* Coins arrondis */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Ombre légère autour des éléments */
+    text-align: center; /* Centrer le texte à l'intérieur */
+    transition: transform 0.10s ease; /* Transition lors du survol */
+}
+
+/* Effet au survol d'un item */
+.item:hover {
+    transform: translateY(-5px); /* Légère élévation de l'élément */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Ombre plus intense */
+}
+
+/* Style pour les titres d'item */
+.item h3 {
+    font-size: 18px;
+    color: green;
+}
+
+/* Style pour les descriptions des items */
+.item p {
+    font-size: 14px;
+    color: white; 
+}
+
+/* Style pour le bouton "Voir plus" */
+.btn {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #4CAF50; 
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    margin-top: 20px;
+    text-align: center;
+    font-weight: bold;
+}
+
+
+/* Style pour le lecteur vidéo */
+.video {
+    margin-top: 10px;
+    width: 100%;
+    max-width: 300px;
+    border-radius: 8px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+}
