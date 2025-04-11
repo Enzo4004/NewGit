@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fr">
 
 <head>
     <meta charset="UTF-8">
@@ -9,10 +9,14 @@
     <script src="/js/script.js"></script>
 </head>
 <header>
+    <!--Flèche de retour -->
+    <a href="header.html"><button class="back-arrow" onclick="history.back()">←</button></a>
+
     <h1>Sonar Du Rap</h1>
 </header>
 <!-- Première section: Découvertes du moment -->
 <section>
+
     <h2>Les Découvertes du Moment</h2>
     <div class="list">
         <div class="item">
@@ -56,24 +60,55 @@
             </video>
         </div>
         <div class="item">
-            <h3>Artiste 4</h3>
+            <h3>Artiste 6</h3>
             <p>Description courte de l'artiste et de son travail actuel.</p>
             <video class="video" controls>
                 <source src="/video/PLANCHES SONAR INSTA (8).mp4" type="video/mp4">
                 Votre navigateur ne prend pas en charge la vidéo.
             </video>
-            
+        </div>
+
+
+        <!-- Dans   le Voir Plus et le Voir Moins -->
+        <a href="#" class="btn" onclick="toggleVideo(event)">Voir plus</a>
        
-        <!-- Ajouter plus d'items ici -->
-    </div>
-    <a href="*" class="btn">Voir plus</a>
-    
-    
-    
-    
-    
-    
-    
-    
-    
-  
+        <div id="videoContainer">
+            
+            <div class="InVP">
+                <h3>Artiste 6</h3>
+                <p>Description courte de l'artiste et de son travail actuel.</p>
+                <video class="video" controls>
+                    <source src="/video/PLANCHES SONAR INSTA (8).mp4" type="video/mp4">
+                    Votre navigateur ne prend pas en charge la vidéo.
+                </video>
+            </div>
+
+            <div class="InVP">
+                <h3>Artiste 6</h3>
+                <p>Description courte de l'artiste et de son travail actuel.</p>
+                <video class="video" controls>
+                    <source src="/video/PLANCHES SONAR INSTA (8).mp4" type="video/mp4">
+                    Votre navigateur ne prend pas en charge la vidéo.
+                </video>
+            </div>
+
+            <div class="InVP">
+                <h3>Artiste 6</h3>
+                <p>Description courte de l'artiste et de son travail actuel.</p>
+                <video class="video" controls>
+                    <source src="/video/PLANCHES SONAR INSTA (8).mp4" type="video/mp4">
+                    Votre navigateur ne prend pas en charge la vidéo.
+                </video>
+            </div>
+
+            <div class="InVP">
+                <h3>Artiste 6</h3>
+                <p>Description courte de l'artiste et de son travail actuel.</p>
+                <video class="video" controls>
+                    <source src="/video/PLANCHES SONAR INSTA (8).mp4" type="video/mp4">
+                    Votre navigateur ne prend pas en charge la vidéo.
+                </video>
+            </div>
+        </div>
+
+        </body>

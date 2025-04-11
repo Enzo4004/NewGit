@@ -1,3 +1,10 @@
+   /* Settings de base pour commencer le css*/
+*{ 
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  }
+    
    /* Mise en forme générale du body */
    body {
     font-family: oswald; 
@@ -81,15 +88,22 @@ h2 {
 .btn {
     display: inline-block;
     padding: 10px 20px;
-    background-color: #4CAF50; 
+    margin-top: 20px;
+    background-color: green;
     color: white;
     text-decoration: none;
-    border-radius: 5px;
-    margin-top: 20px;
-    text-align: center;
-    font-weight: bold;
-}
+    border-radius: 6px;
+    cursor: pointer;
+  }
 
+  .btn:hover {
+    background-color: purple;
+  }
+
+  #videoContainer {
+    display: none; /* Caché au départ */
+    margin-top: 20px;
+  }
 
 /* Style pour le lecteur vidéo */
 .video {
@@ -98,4 +112,54 @@ h2 {
     max-width: 300px;
     border-radius: 8px;
     box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+}
+
+
+ /* Flèche de retour */
+ .back-arrow {
+    position: fixed;
+    top: 20px;
+    left: 20px;
+    background: green;
+    color:#000;
+    border: none;
+    border-radius: 50%;
+    width: 48px;
+    height: 48px;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.2);
+    cursor: pointer;
+    font-size: 1.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1000;
+  }
+
+  .back-arrow:hover {
+    background: purple  ;
+    color: white;
+  }
+
+
+  .InVp{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr; /* Trois colonnes égales */
+    gap: 20px; /* Espacement entre les éléments */
+    margin-top: 20px; /* Marge supérieure */
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+  }
+
+  .InVp img {
+    padding: 15px; /* Espacement interne */
+    background-color: black; /* Fond noir pour chaque élément */
+    border-radius: 10px; /* Coins arrondis */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Ombre légère autour des éléments */
+    text-align: center; /* Centrer le texte à l'intérieur */
+    transition: transform 0.10s ease; /* Transition lors du survol */
+}
+.InVp:hover {
+    transform: translateY(-5px); /* Légère élévation de l'élément */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Ombre plus intense */
 }
