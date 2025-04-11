@@ -11,13 +11,23 @@
 <header>
     <!--Flèche de retour -->
     <a href="header.html"><button class="back-arrow" onclick="history.back()">←</button></a>
+ 
+    <!-- Arrière-plan animé -->
+ <div class="stars-container" id="stars-container"></div>
 
+ <!-- Ton contenu visible -->
+ <div class="content">
+   
+   
     <h1>Sonar Du Rap</h1>
 </header>
+
+
+<h2>Les Découvertes du Moment</h2>
+
+
 <!-- Première section: Découvertes du moment -->
 <section>
-
-    <h2>Les Découvertes du Moment</h2>
     <div class="list">
         <div class="item">
             <h3>Artiste 1</h3>
@@ -70,11 +80,12 @@
 
 
         <!-- Dans   le Voir Plus et le Voir Moins -->
-        <a href="#" class="btn" onclick="toggleVideo(event)">Voir plus</a>
-       
+        <div>
+            <a href="#" class="btn" onclick="toggleVideo(event)">Voir plus</a>
+        </div>
+
         <div id="videoContainer">
-            
-            <div class="InVP">
+            <div class="item">
                 <h3>Artiste 6</h3>
                 <p>Description courte de l'artiste et de son travail actuel.</p>
                 <video class="video" controls>
@@ -83,7 +94,7 @@
                 </video>
             </div>
 
-            <div class="InVP">
+            <div class="item">
                 <h3>Artiste 6</h3>
                 <p>Description courte de l'artiste et de son travail actuel.</p>
                 <video class="video" controls>
@@ -92,7 +103,7 @@
                 </video>
             </div>
 
-            <div class="InVP">
+            <div class="item">
                 <h3>Artiste 6</h3>
                 <p>Description courte de l'artiste et de son travail actuel.</p>
                 <video class="video" controls>
@@ -101,7 +112,7 @@
                 </video>
             </div>
 
-            <div class="InVP">
+            <div class="item">
                 <h3>Artiste 6</h3>
                 <p>Description courte de l'artiste et de son travail actuel.</p>
                 <video class="video" controls>
@@ -111,4 +122,6 @@
             </div>
         </div>
 
-        </body>
+       
+</section>
+</body>

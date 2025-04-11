@@ -13,6 +13,50 @@
     background-color:black; 
     color: black; 
 }
+ /* 🔮 Conteneur des étoiles filantes qui reste en arrière-plan */
+ .stars-container {
+    position: fixed; /* Fixe le conteneur des étoiles en haut à gauche */
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none; /* Laisse les clics passer à travers */
+    z-index: -1; /* Les étoiles seront derrière le contenu de la page */
+  }
+
+  /* 💫 Style de chaque étoile filante */
+  .star {
+    position: absolute;
+    width: 2px; /* Taille fine pour une petite étoile */
+    height: 80px; /* Longueur de la traînée de l'étoile filante */
+    background: limegreen; /* Couleur verte pour les étoiles */
+    opacity: 0; /* Commence invisible */
+    transform: rotate(45deg); /* Rotation pour donner un effet diagonal */
+    animation: shoot 1s linear forwards; /* Animation de l'étoile filante */
+  }
+
+  /* 🎬 Animation des étoiles filantes */
+  @keyframes shoot {
+    0% {
+      opacity: 0; /* L'étoile commence invisible */
+      transform: translate(0, 0) rotate(45deg); /* Position initiale */
+    }
+    10% {
+      opacity: 1; /* L'étoile devient visible rapidement */
+    }
+    100% {
+      transform: translate(-800px, 800px) rotate(45deg); /* Déplace l'étoile hors de l'écran */
+      opacity: 0; /* L'étoile devient invisible après avoir traversé l'écran */
+    }
+  }
+
+  /* ✨ Juste un peu de contenu pour test */
+  .content {
+    padding: 100px;
+    text-align: center;
+    z-index: 1; /* Place le contenu au-dessus des étoiles */
+    position: relative;
+  }
 
 /* Style de l'en-tête */
 header {
@@ -86,6 +130,7 @@ h2 {
 
 /* Style pour le bouton "Voir plus" */
 .btn {
+    font-family: Oswald;
     display: inline-block;
     padding: 10px 20px;
     margin-top: 20px;
@@ -140,26 +185,3 @@ h2 {
     color: white;
   }
 
-
-  .InVp{
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr; /* Trois colonnes égales */
-    gap: 20px; /* Espacement entre les éléments */
-    margin-top: 20px; /* Marge supérieure */
-    display: flex;
-    flex-wrap: wrap;
-    gap: 10px;
-  }
-
-  .InVp img {
-    padding: 15px; /* Espacement interne */
-    background-color: black; /* Fond noir pour chaque élément */
-    border-radius: 10px; /* Coins arrondis */
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Ombre légère autour des éléments */
-    text-align: center; /* Centrer le texte à l'intérieur */
-    transition: transform 0.10s ease; /* Transition lors du survol */
-}
-.InVp:hover {
-    transform: translateY(-5px); /* Légère élévation de l'élément */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Ombre plus intense */
-}
