@@ -13,7 +13,7 @@
     background-color:black; 
     color: black; 
 }
- /* 🔮 Conteneur des étoiles filantes qui reste en arrière-plan */
+ /*  Conteneur des étoiles filantes qui reste en arrière-plan */
  .stars-container {
     position: fixed; /* Fixe le conteneur des étoiles en haut à gauche */
     top: 0;
@@ -24,7 +24,7 @@
     z-index: -1; /* Les étoiles seront derrière le contenu de la page */
   }
 
-  /* 💫 Style de chaque étoile filante */
+  /*  Style de chaque étoile filante */
   .star {
     position: absolute;
     width: 2px; /* Taille fine pour une petite étoile */
@@ -50,7 +50,7 @@
     }
   }
 
-  /* ✨ Juste un peu de contenu pour test */
+  /*  Juste un peu de contenu pour test */
   .content {
     padding: 100px;
     text-align: center;

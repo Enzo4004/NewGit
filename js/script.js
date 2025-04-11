@@ -29,7 +29,7 @@ function toggleVideo(event) {
     const star = document.createElement('div'); // Crée un nouvel élément <div> pour l'étoile
     star.classList.add('star'); // Ajoute la classe 'star' pour appliquer le style de l'étoile
 
-    // 🪐 Positionne l'étoile aléatoirement sur l'écran
+    //  Positionne l'étoile aléatoirement sur l'écran
     star.style.left = Math.random() * window.innerWidth + 'px'; // Position horizontale aléatoire
     star.style.top = Math.random() * window.innerHeight / 2 + 'px'; // Position verticale aléatoire (moitié supérieure de l'écran)
 
