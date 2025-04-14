@@ -27,8 +27,8 @@
   /*  Style de chaque étoile filante */
   .star {
     position: absolute;
-    width: 2px; /* Taille fine pour une petite étoile */
-    height: 80px; /* Longueur de la traînée de l'étoile filante */
+    width: 7px; /* Taille fine pour une petite étoile */
+    height: 90px; /* Longueur de la traînée de l'étoile filante */
     background: limegreen; /* Couleur verte pour les étoiles */
     opacity: 0; /* Commence invisible */
     transform: rotate(45deg); /* Rotation pour donner un effet diagonal */
