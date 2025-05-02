@@ -2,148 +2,97 @@
 <html lang="fr">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="/css.sonardurap/style.css">
-    <script src="/js.SonarDuRap/script.js"></script>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sonar Du Rap</title>
+    <link rel="stylesheet" href="/css.sonardurap/style.css" />
+    <script src="/js.SonarDuRap/script.js" defer></script>
 </head>
-<header>
-    <!--Flèche de retour -->
-    <a href="index.header.html"><button class="back-arrow" onclick="history.back()">←</button></a>
-
-    <!-- Arrière-plan animé -->
-    <div class="stars-container" id="stars-container"></div>
-
-    <!-- Ton contenu visible -->
-    <div class="content">
-
-
-        <h1>Sonar Du Rap</h1>
-</header>
 
 <body>
+    <!-- Flèche de retour -->
+    <a href="index.header.html" class="back-arrow" onclick="history.back()">←</a>
 
+    <!-- Arrière-plan étoilé -->
+    <div class="stars-container" id="stars-container"></div>
 
+    <!-- Contenu principal -->
+    <div class="content">
+        <header>
+            <h1>Sonar Du Rap</h1>
+        </header>
 
-    <h2>Le TOP de 2025 !</h2>
+        <h2>Le TOP de 2025 !</h2>
 
+        <!-- Section principale avec vidéos -->
+        <section class="list">
 
-    <!-- Première section: Découvertes du moment -->
-    <section>
-        <div class="list">
             <div class="item">
                 <h3>Artiste 1</h3>
                 <video class="video" controls>
-                    <source src="/video/PLANCHES SONAR INSTA (10).mp4" type="video/mp4">
-
+                    <source src="/video/PLANCHES SONAR INSTA (6).mp4" type="video/mp4" />
                 </video>
             </div>
+
             <div class="item">
                 <h3>Artiste 2</h3>
                 <video class="video" controls>
-                    <source src="/video/PLANCHES SONAR INSTA (6).mp4" type="video/mp4">
-
+                    <source src="/video/PLANCHES SONAR INSTA (10).mp4" type="video/mp4" />
                 </video>
             </div>
+
             <div class="item">
                 <h3>Artiste 3</h3>
                 <video class="video" controls>
-                    <source src="/video/PLANCHES SONAR INSTA (7).mp4" type="video/mp4">
-
+                    <source src="/video/PLANCHES SONAR INSTA (14).mp4" type="video/mp4" />
                 </video>
             </div>
+
             <div class="item">
                 <h3>Artiste 4</h3>
                 <video class="video" controls>
-                    <source src="/video/PLANCHES SONAR INSTA (8).mp4" type="video/mp4">
-
+                    <source src="/video/PLANCHES SONAR INSTA (9).mp4" type="video/mp4" />
                 </video>
             </div>
+
             <div class="item">
                 <h3>Artiste 5</h3>
                 <video class="video" controls>
-                    <source src="/video/PLANCHES SONAR INSTA (9).mp4" type="video/mp4">
-
+                    <source src="/video/PLANCHES SONAR INSTA (8).mp4" type="video/mp4" />
                 </video>
             </div>
+
             <div class="item">
                 <h3>Artiste 6</h3>
                 <video class="video" controls>
-                    <source src="/video/PLANCHES SONAR INSTA (8).mp4" type="video/mp4">
-
+                    <source src="/video/PLANCHES SONAR INSTA (14).mp4" type="video/mp4" />
                 </video>
             </div>
 
-
-
-
-            
-            <section>
-                <!-- Dans   le Voir Plus et le Voir Moins -->
-            <div>
-                <a href="#" class="btn" onclick="toggleVideo(event)">Voir plus</a>
-            </div>
-            
-                <div id="videoContainer">
-                    <div class="list">
-                        <div class="item">
-                            <h3>Artiste 6</h3>
-                            <video class="video" controls>
-                                <source src="/video/PLANCHES SONAR INSTA (8).mp4" type="video/mp4">
-
-                            </video>
-                        </div>
-
-                        <div class="item">
-                            <h3>Artiste 6</h3>
-                            <video class="video" controls>
-                                <source src="/video/PLANCHES SONAR INSTA (8).mp4" type="video/mp4">
-
-                            </video>
-                        </div>
-
-                        <div class="item">
-                            <h3>Artiste 6</h3>
-                            <video class="video" controls>
-                                <source src="/video/PLANCHES SONAR INSTA (8).mp4" type="video/mp4">
-
-                            </video>
-                        </div>
-
-                        <div class="item">
-                            <h3>Artiste 6</h3>
-                            <video class="video" controls>
-                                <source src="/video/PLANCHES SONAR INSTA (8).mp4" type="video/mp4">
-
-                            </video>
-                        </div>
-                    </div>
+            <!-- Contenu supplémentaire caché au départ -->
+            <div id="extra-videos" style="display: none;">
+                <div class="item">
+                    <h3>Artiste 7</h3>
+                    <video class="video" controls>
+                        <source src="/video/PLANCHES SONAR INSTA (11).mp4" type="video/mp4" />
+                    </video>
                 </div>
-            </section>
-    </section>
-    <!--FIN DU PROGRAMME "VOIR PLUS"-->
-    <br>
-    <h2 id="*">Les pépites de 2025</h2>
 
-    <section>
-        <div class="list">
-            <div class="item">
-                <h3>Artiste 6</h3>
-                <video class="video" controls>
-                    <source src="/video/PLANCHES SONAR INSTA (8).mp4" type="video/mp4">
-
-                </video>
+                <div class="item">
+                    <h3>Artiste 8</h3>
+                    <video class="video" controls>
+                        <source src="/video/PLANCHES SONAR INSTA (12).mp4" type="video/mp4" />
+                    </video>
+                </div>
+                <!-- Ajoute d’autres artistes ici si besoin -->
             </div>
-            <div class="item">
-                <h3>Artiste 6</h3>
-                <video class="video" controls>
-                    <source src="/video/PLANCHES SONAR INSTA (8).mp4" type="video/mp4">
 
-                </video>
-            </div>
-        </div>
-    </section>
+            <a href="#" class="btn" onclick="toggleVideo(event)">Voir plus</a>
 
+        </section>
+
+    </div>
 
 </body>
+
+</html>

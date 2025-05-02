@@ -1,187 +1,189 @@
-   /* Settings de base pour commencer le css*/
-*{ 
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
-  }
-    
-   /* Mise en forme générale du body */
-   body {
-    font-family: oswald; 
-    margin: 0;
-    padding: 0;
-    background-color:black; 
-    color: black; 
+/* Réinitialisation de base pour tous les éléments */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
 }
- /*  Conteneur des étoiles filantes qui reste en arrière-plan */
- .stars-container {
-    position: fixed; /* Fixe le conteneur des étoiles en haut à gauche */
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    pointer-events: none; /* Laisse les clics passer à travers */
-    z-index: -1; /* Les étoiles seront derrière le contenu de la page */
-  }
 
-  /*  Style de chaque étoile filante */
-  .star {
-    position: absolute;
-    width: 7px; /* Taille fine pour une petite étoile */
-    height: 90px; /* Longueur de la traînée de l'étoile filante */
-    background: limegreen; /* Couleur verte pour les étoiles */
-    opacity: 0; /* Commence invisible */
-    transform: rotate(45deg); /* Rotation pour donner un effet diagonal */
-    animation: shoot 1s linear forwards; /* Animation de l'étoile filante */
-  }
+/* Mise en forme générale du corps de la page */
+body {
+  font-family: Oswald, sans-serif;
+  background-color: black;
+  color: white;
+}
 
-  /* 🎬 Animation des étoiles filantes */
-  @keyframes shoot {
-    0% {
-      opacity: 0; /* L'étoile commence invisible */
-      transform: translate(0, 0) rotate(45deg); /* Position initiale */
-    }
-    10% {
-      opacity: 1; /* L'étoile devient visible rapidement */
-    }
-    100% {
-      transform: translate(-800px, 800px) rotate(45deg); /* Déplace l'étoile hors de l'écran */
-      opacity: 0; /* L'étoile devient invisible après avoir traversé l'écran */
-    }
-  }
+/* Conteneur des étoiles filantes en arrière-plan */
+.stars-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  z-index: -1;
+}
 
-  /*  Juste un peu de contenu pour test */
-  .content {
-    padding: 100px;
-    text-align: center;
-    z-index: 1; /* Place le contenu au-dessus des étoiles */
-    position: relative;
-  }
+/* Style d'une étoile filante */
+.star {
+  position: absolute;
+  width: 7px;
+  height: 90px;
+  background: limegreen;
+  opacity: 0;
+  transform: rotate(45deg);
+  animation: shoot 1s linear forwards;
+}
 
-/* Style de l'en-tête */
+/* Animation d'une étoile filante */
+@keyframes shoot {
+  0% {
+    opacity: 0;
+    transform: translate(0, 0) rotate(45deg);
+  }
+  10% {
+    opacity: 1;
+  }
+  100% {
+    transform: translate(-800px, 800px) rotate(50deg);
+    opacity: 0;
+  }
+}
+
+/* Zone de contenu principale */
+.content {
+  padding: 100px;
+  text-align: center;
+  position: relative;
+  z-index: 1;
+}
+
+/* En-tête du site */
 header {
-    background-color: black; 
-    color: green; 
-    padding: 15px 0; /* Espacement interne */
-    text-align: center; 
-    font-size: 24px; /* Taille de texte */
-    font-weight: bold; /* Texte en gras */
+  background-color: black;
+  color: green;
+  padding: 15px 0;
+  text-align: center;
+  font-size: 24px;
+  font-weight: bold;
 }
 
-/* Section générale */
+/* Section principale avec contenu */
 section {
-    padding: 40px 20px; /* Espacement interne de la section */
-    margin: 20px auto; /* Marge extérieure */
-    max-width: 1200px; /* Largeur maximale */
-    background-color: black; /* Fond blanc */
-    border-radius: 10px; /* Coins arrondis */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Ombre légère autour de la section */
-    transition: all 0.3s ease; /* Transition fluide lors du survol */
+  padding: 40px 20px;
+  margin: 20px auto;
+  max-width: 1200px;
+  background-color: black;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
 }
 
-/* Effet au survol d'une section */
+/* Effet de survol sur les sections */
 section:hover {
-    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.10); /* Ombre plus intense */
-    transform: translateY(-10px); /* Légère élévation de la section */
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+  transform: translateY(-10px);
 }
 
-/* Titre des sections */
+/* Titres de section */
 h2 {
-    text-align: center; /* Centrer le titre */
-    font-size: 28px; /* Taille du titre */
-    color: green; /* Vert pour les titres */
+  text-align: center;
+  font-size: 28px;
+  color: green;
+  text-decoration: none;
 }
 
-/* Liste des éléments en grille */
+/* Grille d'éléments */
 .list {
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr; /* Trois colonnes égales */
-    gap: 20px; /* Espacement entre les éléments */
-    margin-top: 20px; /* Marge supérieure */
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 20px;
+  margin-top: 20px;
 }
 
-/* Style pour chaque item de la liste */
+/* Élément individuel dans la grille */
 .item {
-    padding: 15px; /* Espacement interne */
-    background-color: black; /* Fond noir pour chaque élément */
-    border-radius: 10px; /* Coins arrondis */
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Ombre légère autour des éléments */
-    text-align: center; /* Centrer le texte à l'intérieur */
-    transition: transform 0.10s ease; /* Transition lors du survol */
+  padding: 15px;
+  background-color: black;
+  border-radius: 50px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  transition: transform 0.5s ease;
 }
 
-/* Effet au survol d'un item */
+/* Effet de survol sur un élément */
 .item:hover {
-    transform: translateY(-5px); /* Légère élévation de l'élément */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Ombre plus intense */
+  transform: translateY(-5px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 
-/* Style pour les titres d'item */
+/* Titre d'un élément */
 .item h3 {
-    font-size: 18px;
-    color: green;
+  font-size: 18px;
+  color: green;
 }
 
-/* Style pour les descriptions des items */
+/* Description d'un élément */
 .item p {
-    font-size: 14px;
-    color: white; 
+  font-size: 14px;
+  color: white;
 }
 
-/* Style pour le bouton "Voir plus" */
+/* Bouton d'action */
 .btn {
-    font-family: Oswald;
-    display: inline-block;
-    padding: 10px 20px;
-    margin-top: 20px;
-    background-color: green;
-    color: white;
-    text-decoration: none;
-    border-radius: 6px;
-    cursor: pointer;
-  }
+  font-family: Oswald, sans-serif;
+  display: inline-block;
+  padding: 10px 20px;
+  margin-top: 20px;
+  background-color: green;
+  color: white;
+  text-decoration: none;
+  border-radius: 6px;
+  cursor: pointer;
+}
 
-  .btn:hover {
-    background-color: purple;
-  }
-
-  #videoContainer {
-    display: none; /* Caché au départ */
-    margin-top: 20px;
-  }
-
-/* Style pour le lecteur vidéo */
-.video {
-    margin-top: 10px;
-    width: 100%;
-    max-width: 300px;
-    border-radius: 8px;
-    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+.btn:hover {
+  background-color: purple;
 }
 
 
- /* Flèche de retour */
- .back-arrow {
-    position: fixed;
-    top: 20px;
-    left: 20px;
-    background: green;
-    color:#000;
-    border: none;
-    border-radius: 50%;
-    width: 48px;
-    height: 48px;
-    box-shadow: 0 2px 6px rgba(0,0,0,0.2);
-    cursor: pointer;
-    font-size: 1.5rem;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    z-index: 1000;
-  }
+/* Conteneur pour la vidéo (caché au début) */
+#videoContainer {
+  display: none;
+  margin-top: 20px;
+}
 
-  .back-arrow:hover {
-    background: purple  ;
-    color: white;
-  }
 
+/* Style du lecteur vidéo */
+.video {
+  margin-top: 10px;
+  width: 100%;
+  max-width: 300px;
+  border-radius: 8px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Bouton de retour en arrière */
+.back-arrow {
+  position: fixed;
+  top: 20px;
+  left: 20px;
+  background: green;
+  color: black;
+  border: none;
+  border-radius: 50%;
+  width: 48px;
+  height: 48px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+  cursor: pointer;
+  font-size: 1.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+
+}
+
+.back-arrow:hover {
+  background: purple;
+  color: white;
+}

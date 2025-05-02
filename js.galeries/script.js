@@ -18,3 +18,6 @@ document.getElementsByClassName("button-1").addEventListener("click", function()
     //Gestion du volume 
     var audio = document.querySelector("audio");
     audio.volume = 0.1;  // Régle le volume à 50%
+
+    const audioElement = document.querySelector("audio");
+audioElement.volume = 1;

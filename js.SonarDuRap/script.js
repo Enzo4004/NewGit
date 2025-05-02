@@ -1,28 +1,20 @@
-
-
-
-
-  //Script pour Sonar Du Rap 
-// Fonction qui affiche ou cache la vidéo
+// Fonction appelée lorsqu'on clique sur le bouton "Voir plus" / "Voir moins"
 function toggleVideo(event) {
-  //  Empêche que le lien recharge la page
-  event.preventDefault();
+  event.preventDefault(); // Empêche l'action par défaut du lien (évite de recharger la page)
 
-  //  Récupère l'élément contenant la vidéo
-  const video = document.getElementById("videoContainer");
+  const extraVideos = document.getElementById("extra-videos"); // Récupère le conteneur des vidéos supplémentaires
+  const btn = event.currentTarget; // Récupère le bouton qui a été cliqué
 
-  // Récupère le lien cliqué
-  const bouton = event.target;
-
-  //  Affiche ou cache la vidéo
-  if (video.style.display === "none") {
-    video.style.display = "block";          // Affiche la vidéo
-    bouton.textContent = "Voir moins";      // Change le texte du bouton
+  // Vérifie si le conteneur des vidéos est caché ou vide
+  if (extraVideos.style.display === "none" || extraVideos.style.display === "") {
+      extraVideos.style.display = "block"; // Affiche les vidéos supplémentaires
+      btn.textContent = "Voir moins"; // Change le texte du bouton pour "Voir moins"
   } else {
-    video.style.display = "none";           // Cache la vidéo
-    bouton.textContent = "Voir plus";       // Remet le texte d'origine
+      extraVideos.style.display = "none"; // Cache les vidéos supplémentaires
+      btn.textContent = "Voir plus"; // Remet le texte du bouton sur "Voir plus"
   }
 }
+
 
 
 
@@ -49,35 +41,3 @@ function toggleVideo(event) {
   setInterval(() => {
     createStar(); // Crée une nouvelle étoile à chaque intervalle
   }, Math.random() * 300 + 300); // Intervalle aléatoire entre 300ms et 1000ms (plus d'étoiles
-
-
-
-   // Créer un objet pour gérer les musiques et éviter la lecture simultanée
-   const musicFiles = {
-    music1: 'https://www.soundhelix.com/examples/mp3/SoundHelix-Song-1.mp3',
-    music2: 'https://www.soundhelix.com/examples/mp3/SoundHelix-Song-2.mp3',
-    music3: 'https://www.soundhelix.com/examples/mp3/SoundHelix-Song-3.mp3'
-  };
-
-  // Variable pour stocker la musique en cours de lecture
-  let currentMusic = null;
-
-  // Fonction pour jouer la musique
-  function playMusic(music) {
-    // Si une musique est déjà en cours, on la met en pause avant de jouer la nouvelle
-    if (currentMusic !== null) {
-      currentMusic.pause(); // Met en pause la musique actuelle
-    }
-
-    // Créer une nouvelle balise audio pour la musique sélectionnée
-    const audio = new Audio(musicFiles[music]);
-
-    // Lorsque la musique est terminée, réinitialise currentMusic
-    audio.onended = function() {
-      currentMusic = null;
-    };
-
-    // Jouer la nouvelle musique
-    audio.play();
-
-  }
