@@ -1,21 +1,29 @@
 // Fonction appelée lorsqu'on clique sur le bouton "Voir plus" / "Voir moins"
 function toggleVideo(event) {
-  event.preventDefault(); // Empêche l'action par défaut du lien (évite de recharger la page)
-
-  const extraVideos = document.getElementById("extra-videos"); // Récupère le conteneur des vidéos supplémentaires
+  
   const btn = event.currentTarget; // Récupère le bouton qui a été cliqué
-
-  // Vérifie si le conteneur des vidéos est caché ou vide
-  if (extraVideos.style.display === "none" || extraVideos.style.display === "") {
-      extraVideos.style.display = "block"; // Affiche les vidéos supplémentaires
-      btn.textContent = "Voir moins"; // Change le texte du bouton pour "Voir moins"
-  } else {
-      extraVideos.style.display = "none"; // Cache les vidéos supplémentaires
-      btn.textContent = "Voir plus"; // Remet le texte du bouton sur "Voir plus"
+  let hiddens = document.querySelectorAll(".hidden")//contenue caché 
+  let warread = document.querySelectorAll(".warread")
+  if(hiddens.length > 0 ){
+    hiddens.forEach((e)=> {
+      e.classList.remove("hidden") 
+    })
+    btn.textContent = "Voir Moins"
+  }else {
+    warread.forEach((e)=> {
+      e.classList.add("hidden")
+    })
+    btn.textContent = "Voir Plus"
   }
+    
+
 }
 
-
+// Explication de la ligne 2 a 16
+//creation de la varibales qui recupere le bouton 
+//creation des deux variables html (hiddens et warread) sauf que les deux on des fonctionnalités differentes 
+//la classe hidden sert a cahé les elements html quand on clique pas sur le bouton 
+//La classe Warread sert a differencier 
 
 
 //ANIMATION SONAR DU RAP 

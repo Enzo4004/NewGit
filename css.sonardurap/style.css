@@ -59,7 +59,7 @@ body {
 
 /* En-tête du site */
 header {
-  background-color: black;
+  background-color: black ;
   color: green;
   padding: 15px 0;
   text-align: center;
@@ -186,4 +186,10 @@ h2 {
 .back-arrow:hover {
   background: purple;
   color: white;
+}
+
+
+.hidden{
+display: none;
+
 }
