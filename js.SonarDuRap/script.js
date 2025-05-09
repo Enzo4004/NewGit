@@ -3,7 +3,7 @@ function toggleVideo(event) {
   
   const btn = event.currentTarget; // Récupère le bouton qui a été cliqué
   let hiddens = document.querySelectorAll(".hidden")//contenue caché 
-  let warread = document.querySelectorAll(".warread")
+  let warread = document.querySelectorAll(".warread") //contenue visible apres execution du btn
   if(hiddens.length > 0 ){
     hiddens.forEach((e)=> {
       e.classList.remove("hidden") 
