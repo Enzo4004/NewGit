@@ -23,7 +23,10 @@ function toggleVideo(event) {
 //creation de la varibales qui recupere le bouton 
 //creation des deux variables html (hiddens et warread) sauf que les deux on des fonctionnalités differentes 
 //la classe hidden sert a cahé les elements html quand on clique pas sur le bouton 
-//La classe Warread sert a differencier 
+//La classe Warread sert a differencier
+
+
+
 
 
 //ANIMATION SONAR DU RAP 
