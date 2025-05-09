@@ -8,17 +8,24 @@
     <meta description="Association Musicale Sonar Crew">
     <title>La Galerie</title>
     <link rel="stylesheet" href="css.galeries/style.css">
-    <script src="/js.galeries/script.js"></script>
+
 </head>
 
 <body>
     <button class="back-arrow" onclick="history.back()">←</button>
-    
+
     <div>
-        <a href="header.html"><img src="/img/Logo-Sonar.jpg" alt="Logo"></a>
+        <a href="index.header.html"><img src="/img/Logo-Sonar.jpg" alt="Logo"></a>
     </div>
     <h1> <a href="index.LaGalerie.html"></a> La Galerie</h1>
 
+    <!--button pour activer le son-->
+    <a href="javascript:void(0)" onclick="demuteAudio()" class="btnUnmuted">Active le son pour plus d'immersion !</a>
+
+    <!--Saut de ligne-->
+    <br>
+    <br>
+    <br>
     <div class="galerie">
 
         <div class="galerieDim">
@@ -88,8 +95,12 @@
         </div>
     </div>
     </div>
-     
+
     <!--Source audio    -->
-    <audio autoplay loop>
+    <audio id="myAudio" autoplay loop muted>
         <source src="/music/TSR Crew - Champs De Vision.mp3" type="audio/mpeg">
     </audio>
+    <script src="/js.galeries/script.js"></script>
+</body>
+
+</html>

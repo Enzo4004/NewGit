@@ -131,7 +131,9 @@ h2 {
 /* Bouton d'action */
 .btn {
   font-family: Oswald, sans-serif;
-  display: inline-block;
+  display: inline-flex;              
+  justify-content: center;          
+  align-items: center;              
   padding: 10px 20px;
   margin-top: 20px;
   background-color: green;
@@ -139,7 +141,9 @@ h2 {
   text-decoration: none;
   border-radius: 6px;
   cursor: pointer;
+  transition: background-color 0.3s; /* ajout : effet de transition fluide */
 }
+
 
 .btn:hover {
   background-color: purple;

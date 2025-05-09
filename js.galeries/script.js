@@ -1,23 +1,24 @@
 
-//Script pour La galeries Photo 
-document.getElementsByClassName("button-1").addEventListener("click", function() {
-    let button = this;
-    
-    // Ajout de la classe pour l'animation
-    button.classList.add("animate");
-  
-    // Suppression après 3s pour revenir à l'état normal
-    Timeout(() => {
-        button.classList.remove("animate");
-    }, 300);
-    console.log ("trés Bon choix !");
-  });
-  
-  
-  
-    //Gestion du volume 
-    var audio = document.querySelector("audio");
-    audio.volume = 0.1;  // Régle le volume à 50%
+//Gestion du Unnmute en un clique ainsi que du volume de la musique 
+const audio = document.getElementById("myAudio");
+//activation du bttn
+const button = document.getElementById ("demuteAudio");
+function demuteAudio(){
+  if (audio){
+    audio.muted =false; //enlève le mute en un simple clique 
+    audio.volume = 0.4; // regle le volume a 40%
+    audio;play();        //relance la lecture une fois que celle-ci soit terminer 
+  }
+}
 
-    const audioElement = document.querySelector("audio");
-audioElement.volume = 1;
+
+
+button.addEventListener('click', function() {
+  if (audio) {
+    audio.muted = false;     // retire le muted
+    audio.volume = 0.4;      // règle le volume à 40%
+    audio.play().catch(error => {
+      console.error('Erreur de lecture :', error);
+    });
+  }
+});
