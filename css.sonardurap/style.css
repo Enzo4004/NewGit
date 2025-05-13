@@ -86,8 +86,9 @@ section:hover {
 
 /* Titres de section */
 h2 {
+  font-family: Oswald;
   text-align: center;
-  font-size: 28px;
+  font-size: 5vh;
   color: green;
   text-decoration: none;
 }
@@ -118,30 +119,38 @@ h2 {
 
 /* Titre d'un élément */
 .item h3 {
-  font-size: 18px;
+  font-size: 3vh;
   color: green;
 }
 
 /* Description d'un élément */
 .item p {
-  font-size: 14px;
+  font-size: 14vh;
   color: white;
 }
 
 /* Bouton d'action */
 .btn {
   font-family: Oswald, sans-serif;
-  display: inline-flex;              
-  justify-content: center;          
-  align-items: center;              
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
   padding: 10px 20px;
-  margin-top: 20px;
   background-color: green;
   color: white;
   text-decoration: none;
   border-radius: 6px;
   cursor: pointer;
   transition: background-color 0.3s; /* ajout : effet de transition fluide */
+}
+
+
+/*Le conteneur*/
+.container {
+  height: 10vh;   /*prend toute la hauteur de la fenêtre*/
+  display: flex;
+  justify-content: center; /*centre horizontalement*/
+  align-items: center;     /*centre verticalement*/
 }
 
 
@@ -161,7 +170,7 @@ h2 {
 .video {
   margin-top: 10px;
   width: 100%;
-  max-width: 300px;
+  max-width: 40vh;
   border-radius: 8px;
   box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
 }
